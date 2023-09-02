@@ -1,0 +1,29 @@
+$namespace: 'h' !default;
+$block-sel: '-' !default;
+$elem-sel: "__" !default;
+$mod-sel: '--' !default;
+
+@mixin b($value){
+    $B: #{$namespace + $block-sel + $value};
+    .#{$B}{
+        @content;
+    }
+}
+
+@mixin e($value){
+    $selector: &;
+    @at-root{
+        #{$selector + $elem-sel + $value}{
+            @content
+        }
+    }
+}
+
+@mixin m($value){
+    $selector: &;
+    @at-root{
+        #{$selector + $mod-sel + $value}{
+            @content
+        }
+    }
+}

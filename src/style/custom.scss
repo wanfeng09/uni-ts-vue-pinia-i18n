@@ -1,0 +1,10 @@
+@include b(contain) { // h-contain
+    width: 100%;
+    height: 100%;
+    @include e(hidden){
+        overflow: hidden; // h-contain__hidden
+    }
+    @include m(success) {
+        background-color: green; // h-contain--success
+    }
+}
