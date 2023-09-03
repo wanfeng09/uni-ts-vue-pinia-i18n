@@ -17,6 +17,12 @@
 			"style": {
 				"navigationBarTitleText": "我的地址"
 			}
+		},
+		{
+			"path": "pages/about/setting/addAddress",
+			"style": {
+				"navigationBarTitleText": "添加地址"
+			}
 		}
 	],
 	// 组件自动导入
@@ -34,5 +40,21 @@
 		"navigationBarTitleText": "h-shop",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#B6C3D2",
+		"selectedColor": "#008AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/about/index",
+				"text": "关于"
+			}
+		]
 	}
 }

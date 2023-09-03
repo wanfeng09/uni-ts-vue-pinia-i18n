@@ -1,10 +1,178 @@
-@include b(contain) { // h-contain
-    width: 100%;
-    height: 100%;
-    @include e(hidden){
-        overflow: hidden; // h-contain__hidden
-    }
-    @include m(success) {
-        background-color: green; // h-contain--success
+/* 加载主题样式 */
+@import "./theme.scss";
+
+/* 使用说明 */
+@include b(contain) {
+  // h-contain
+  width: 100%;
+  height: 100%;
+  @include e(hidden) {
+    // h-contain__hidden
+    overflow: hidden;
+  }
+  @include m(success) {
+    // h-contain--success
+    background-color: green;
+  }
+}
+/* 使用说明 */
+
+// 背景颜色
+@include b(bg) {
+  @include m(primaryColor) {
+    background-color: $primaryColor;
+  }
+  @include m(white) {
+    background-color: $white;
+  }
+  @include m(gray) {
+    background-color: $gray;
+  }
+}
+// 字体颜色
+@include b(color) {
+  @include m(primaryColor) {
+    color: $primaryColor;
+  }
+  @include m(white) {
+    color: $white;
+  }
+  @include m(dark-gray) {
+    color: $dark-gray;
+  }
+}
+// 间距
+@include b(padding) {
+  padding: $padding;
+  box-sizing: border-box;
+  @include e(x) {
+    padding: $padding-x;
+    box-sizing: border-box;
+  }
+  @include e(y) {
+    padding: $padding-y;
+    box-sizing: border-box;
+  }
+}
+@include b(margin) {
+  margin: $margin;
+  @include e(x) {
+    margin: $margin-x;
+  }
+  @include e(y) {
+    margin: $margin-y;
+  }
+}
+
+@include b(nomargin){
+    margin: 0 !important;
+}
+
+// flex布局
+@include b(row) {
+  display: flex;
+  flex-direction: row;
+  @include e(wrap) {
+    flex-wrap: wrap;
+  }
+  @include e(nowrap) {
+    flex-wrap: nowrap;
+  }
+}
+
+@include b(column) {
+  display: flex;
+  flex-direction: column;
+}
+
+@include b(flex1) {
+  flex: 1;
+}
+
+@include b(justify) {
+  @include m(center) {
+    justify-content: center;
+  }
+  @include m(start) {
+    justify-content: flex-start;
+  }
+  @include m(end) {
+    justify-content: flex-end;
+  }
+  @include m(around) {
+    justify-content: space-around;
+  }
+  @include m(between) {
+    justify-content: space-between;
+  }
+}
+
+@include b(align) {
+  @include m(center) {
+    align-items: center;
+  }
+  @include m(start) {
+    align-items: flex-start;
+  }
+  @include m(end) {
+    align-items: flex-end;
+  }
+}
+
+// 文字大小
+@include b(h1) {
+  font-size: $h1;
+}
+@include b(h2) {
+  font-size: $h2;
+}
+@include b(h3) {
+  font-size: $h3;
+}
+@include b(h4) {
+  font-size: $h4;
+}
+@include b(h5) {
+  font-size: $h5;
+}
+@include b(h6) {
+  font-size: $h6;
+}
+@include b(text) {
+  font-size: $text;
+}
+
+// 按钮样式
+@include b(button) {
+  font-size: $button-text-size;
+  text-align: center;
+  @include m(mini) {
+    font-size: $button-mini-text-size;
+    text-align: center;
+  }
+  @include m(max) {
+    font-size: $button-size;
+    text-align: center;
+  }
+  @include e(radius) {
+    border-radius: $button-border-radius;
+  }
+  @include e(noborder) {
+    border-right-width: 0;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0 !important;
+  }
+}
+
+@include b(border){
+    @include e(bottom){
+        border-bottom-style:solid;
+        border-bottom-width:1px;
+        border-bottom-color:$border-color;
     }
 }
+
+
+

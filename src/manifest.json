@@ -1,6 +1,6 @@
 {
     "name" : "",
-    "appid" : "",
+    "appid" : "", // ios、安卓
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -54,6 +54,17 @@
         "setting" : {
             "urlCheck" : false
         },
+        // "permission" : {
+        //     "scope.userLocation" : {
+        //         "desc" : "获取用户地址"
+        //     }
+        // },
+        "requiredPrivateInfos": [
+            "getLocation",
+            "onLocationChange",
+            "startLocationUpdateBackground",
+            "chooseAddress"
+        ],
         "usingComponents" : true
     },
     "mp-alipay" : {
