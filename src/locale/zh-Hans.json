@@ -1,0 +1,10 @@
+{
+    "nav.title": "首页",
+    "nav.about": "关于",
+    "home": {
+        "title": "首页"
+    },
+    "button": {
+        "switch" : "英文"
+    }
+}

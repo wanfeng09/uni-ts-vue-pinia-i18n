@@ -1,3 +1,4 @@
 export const enum Names {
-    Address= 'Address'
+    Address= 'Address',
+    Lang = 'Lang'
 }

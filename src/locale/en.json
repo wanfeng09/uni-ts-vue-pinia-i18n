@@ -1,0 +1,10 @@
+{
+    "nav.title": "Home",
+    "nav.about": "About",
+    "home": {
+        "title": "Home"
+    },
+    "button": {
+        "switch" : "Chinese"
+    }
+}
